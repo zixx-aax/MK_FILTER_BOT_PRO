@@ -31,7 +31,7 @@ INDEX_CAPTION = bool(environ.get('SAVE_CAPTION', True)) # Save caption db when i
 #Making it false will not save caption in db SO you can save some storage space
 
 
-PICS = (environ.get('PICS', 'https://graph.org/file/56b5deb73f3b132e2bb73.jpg https://graph.org/file/5303692652d91d52180c2.jpg https://graph.org/file/425b6f46efc7c6d64105f.jpg https://graph.org/file/876867e761c6c7a29855b.jpg')).split()  # Sample pic
+PICS = (environ.get('PICS', '')).split()  # Sample pic
 NOR_IMG = environ.get("NOR_IMG", "https://graph.org/file/e20b5fdaf217252964202.jpg")
 MELCOW_PHOTO = environ.get("MELCOW_PHOTO", "https://graph.org/file/56b5deb73f3b132e2bb73.jpg")
 SPELL_IMG = environ.get("SPELL_IMG", "https://graph.org/file/13702ae26fb05df52667c.jpg")
@@ -83,13 +83,13 @@ DATABASE_URI2 = environ.get('DATABASE_URI2', "")  # MongoDB URI for the second d
 # ============================
 # Movie Notification & Update Settings
 # ============================
-MOVIE_UPDATE_NOTIFICATION = bool(environ.get('MOVIE_UPDATE_NOTIFICATION', False))  # Notification On (True) / Off (False)
+MOVIE_UPDATE_NOTIFICATION = bool(environ.get('MOVIE_UPDATE_NOTIFICATION', True))  # Notification On (True) / Off (False)
 MOVIE_UPDATE_CHANNEL = int(environ.get('MOVIE_UPDATE_CHANNEL', '-100'))  # Notification of sent to your channel
 DREAMXBOTZ_IMAGE_FETCH = bool(environ.get('DREAMXBOTZ_IMAGE_FETCH', True))  # On (True) / Off (False)
 LINK_PREVIEW = bool(environ.get('LINK_PREVIEW', False)) # Shows link preview in notification msg instead of image
 ABOVE_PREVIEW = bool(environ.get('ABOVE_PREVIEW', True)) # Shows link preview above the text in notification msg if True else below the msg
 TMDB_API_KEY = environ.get('TMDB_API_KEY', '') # preffer to use your own tmdb API Key get it from https://www.themoviedb.org/settings/api
-TMDB_POSTER = bool(environ.get('TMDB_POSTER', False)) # Shows TMDB poster in notification msg
+TMDB_POSTER = bool(environ.get('TMDB_POSTER', True)) # Shows TMDB poster in notification msg
 LANDSCAPE_POSTER = bool(environ.get('LANDSCAPE_POSTER', True)) # Shows landscape poster in notification msg
 
 # ============================
@@ -120,9 +120,9 @@ THREE_VERIFY_GAP = int(environ.get('THREE_VERIFY_GAP', "54000"))
 # ============================
 # Channel & Group Links Configuration
 # ============================
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/technokrrish') # Group link for the bot
-OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/technokrrishyt') # Owner link for the bot
-UPDATE_CHNL_LNK = environ.get('UPDATE_CHNL_LNK', 'https://t.me/ip_update') # Update channel link for the bot
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/') # Group link for the bot
+OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/otc_ben_bot') # Owner link for the bot
+UPDATE_CHNL_LNK = environ.get('UPDATE_CHNL_LNK', 'https://t.me/') # Update channel link for the bot
 
 # ============================
 # User Configuration
@@ -159,7 +159,7 @@ PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), False) #
 PM_SEARCH = bool(environ.get('PM_SEARCH', True))  # PM Search On (True) / Off (False)
 EMOJI_MODE = bool(environ.get('EMOJI_MODE', False))  # Emoji status On (True) / Off (False)
 BUTTON_MODE = is_enabled((environ.get('BUTTON_MODE', "False")), False) # pm & Group button or link mode (True) / Off (False)
-STREAM_MODE = bool(environ.get('STREAM_MODE', False)) # Set Stream mode True or False
+STREAM_MODE = bool(environ.get('STREAM_MODE', True)) # Set Stream mode True or False
 PREMIUM_STREAM_MODE = bool(environ.get('PREMIUM_STREAM_MODE', False)) # Set Stream mode True or False only for premium users
 
 
